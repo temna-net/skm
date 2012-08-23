@@ -1,0 +1,102 @@
+{subtemplate common/header}
+<div id="pt" class="bm cl"><div class="z">
+<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulfamehall:star">{$lang['sq_01']}</a></div> 
+</div> 
+<div id="ct" class="ct2 wp cl">
+<div class="mn">
+<!--{if !$gid}-->
+<!--{loop $trcs $trc}-->
+<h1 class="mt">{$lang['sq_02']} {$trc[groupname]}</h1>
+<!--{/loop}-->
+<!--{else}-->
+<h1 class="mt">{$lang['sq_02']} $giddb[groupname]</h1>
+<!--{/if}-->
+<table width=100% border=0 cellspacing=0 cellpadding=0 align=center bgcolor=#ffffff background="$settings[fame_flashbg]"><tr><td>
+<object id="myFlash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100%" height="550" align="middle"> 
+<!--{if !$gid}-->
+<!--{loop $trcs $trc}-->
+<param name="flashvars" value="xmlAdd=data/cache/cache_famehall_{$trc[id]}.xml?{$randid}" />
+<!--{/loop}-->
+<!--{else}-->
+<param name="flashvars" value="xmlAdd=data/cache/cache_famehall_{$gid}.xml?{$randid}" />
+<!--{/if}-->
+<param name="wmode" value="transparent" />
+<param name="movie" value="$fameflash"/> 
+<param name="quality" value="high"/>
+<!--{if !$gid}-->
+<!--{loop $trcs $trc}-->
+<embed value="transparent" name="myFlash" swLiveConnect="true" src="$fameflash" flashvars="xmlAdd=data/cache/cache_famehall_{$trc[id]}.xml?{$randid}" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="550"></embed>
+<!--{/loop}-->
+<!--{else}-->
+<embed value="transparent" name="myFlash" swLiveConnect="true" src="$fameflash" flashvars="xmlAdd=data/cache/cache_famehall_{$gid}.xml?{$randid}" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="550"></embed>
+<!--{/if}-->
+</object>
+		</table>
+		</div>
+<div class="sd">
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['sq_03']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+<!--{if $mingrentangs}-->
+	<!--{loop $mingrentangs $mingrentang}-->
+	<li><a href="plugin.php?id=dsu_paulfamehall:star&gid=$mingrentang[id]">$mingrentang[groupname]</a></li>
+	<!--{/loop}-->
+<!--{else}-->
+	<li>{$lang['sq_04']}</li>
+<!--{/if}-->
+				</ul>
+			</div>
+	</div>
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['sq_05']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li>{$lang['sq_06']}</li>
+				</ul>
+			</div>
+	</div>
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['sq_07']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li>{$lang['sq_08']}</li>
+				</ul>
+			</div>
+	</div>
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['verinfo']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li><a href="{$fameadd}" title="{$lang['verinfo1']}" target="_blank"><span style="font: bold 14px Arial; color: #fbb040;">[DSU]</span><span style="font: bold 12px Verdana; color: #f15a29;">Hall Of Fame</span></a><span style="font: normal 9px Verdana; display:block;">Ver <a href="{$fameadd}" title="{$lang['verinfo2']}" style="font: bold 9px Verdana;">$famever</a> Build $fameBuild</span></li>
+				</ul>
+			</div>
+	</div>
+<!--{if $_G['uid']}-->
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['pt_01']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+		<!--{if !empty($settings[fame_openfamereg])}-->
+			<li><a href="plugin.php?id=dsu_paulfamehall:star&action=famereg">{$lang['pt_04']}</a></li>
+		<!--{/if}-->
+		<!--{if $_G['uid'] && $_G['adminid'] == 1}-->
+			<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop">{$lang['pt_05']}</a></li>
+		<!--{/if}-->
+				</ul>
+			</div>
+	</div>
+<!--{/if}-->
+	</div>
+</div>
+{subtemplate common/footer}

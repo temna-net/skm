@@ -1,0 +1,413 @@
+{subtemplate common/header}
+<style> 
+.datalist { zoom: 1; }
+.datalist table { margin-bottom: 30px; width: 100%; border: 1px solid #E6E7E1; }
+.datalist th, .datalist td { padding: 4px 5px; border: 1px solid #E6E7E1; font-weight: 400; }
+.datalist th img { vertical-align: top; }
+.datalist table .stat_subject { border-right: none; }
+.datalist table .stat_num { padding-right: 15px; text-align: right; border-left: none; }
+.datalist .datatable { margin-bottom: 10px; }
+.datalist .datatable, .datalist .datatable th, .datalist .datatable td { border-width: 1px 0; }
+.datalist .fixtable { table-layout: fixed; }
+.colplural, .colplural th, .colplural td, th.highlight, td.highlight { background-color: #F5F5F5; }
+.qdsmile{padding:3px;margin:auto;float:left;list-style:none;float:left}
+.qdsmile li{float: left;width:40px;padding:5px .6em;border:2px #fff solid;}
+.qdsmile li:hover{cursor:pointer;background:#F7FAFF;border:2px dashed #D1D8D8;}
+</style>
+<div id="pt" class="bm cl"><div class="z">
+<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop">{$lang['admin_01']}</a></div> 
+</div>
+<div id="ct" class="ct2 wp cl">
+<div class="mn">
+					<h1 class="mt">{$lang['admin_01']}</h1>
+					<ul class="tb cl">
+						<li <!--{if $_G['gp_operation'] == ''}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop">{$lang['admin_02']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'edituser'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=edituser">{$lang['admin_03']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'addgroup'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=addgroup">{$lang['admin_04']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'adduser'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=adduser">{$lang['admin_05']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'regedit'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=regedit">{$lang['admin_06']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'box'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=box">{$lang['admin_07']}</a></li>
+						<li <!--{if $_G['gp_operation'] == 'color'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=color">{$lang['admin_08']}</a></li>
+					</ul>
+					<br>
+<!--{if $_G['gp_operation'] == ''}-->
+					<h1 class="mt">{$lang['admin_09']}</h1>
+					{$lang['admin_10']}
+<!--{elseif $_G['gp_operation'] == 'edituser'}-->
+			<div class="datalist">
+				<h1 class="mt">{$lang['admin_03']}<!--{if $mrtgid == ''}--><!--{else}-->[{$lang['admin_80']} {$giddb['groupname']}]  <a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=edituser">{$lang['admin_81']}</a><!--{/if}--></h1>
+				<table cellspacing="0" cellpadding="0" summary="{lang invite_logs}" class="datatable" style="margin-bottom:30px;">
+<!--{if $mrtgid == ''}-->
+					<tr class="colplural">
+						<th width="3%"></th>
+						<th width="10%">{$lang['admin_11']}</th>
+						<th width="20%">{$lang['admin_12']}</th>
+						<th width="15%">{$lang['admin_84']}</th>
+						<th width="20%">{$lang['admin_13']}</th>
+						<th width="10%">{$lang['admin_14']}</th>
+						<th width="10%">{$lang['admin_15']}</th>
+						<th width="10%">{$lang['admin_16']}</th>
+					</tr>
+<!--{if $mingrentangs}-->
+<SCRIPT type="text/javascript">
+function delcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_17']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+function editcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_18']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+</SCRIPT>
+	<!--{loop $mingrentangs $mingrentang}-->
+	<tr>
+		<td></td>
+		<form method="post" name="edit" action="plugin.php?id=dsu_paulfamehall:star&group=edit&mrtgid=$mingrentang[id]&formhash={FORMHASH}" onSubmit="return editcheck()">
+		<td>$mingrentang[id]</td>
+		<td><input size="20" type="text" name="editvalue" value="$mingrentang[groupname]"></td>
+		<td><input size="15" type="text" name="editvalue2" value="$mingrentang[grouppic]"></td>
+		<td><input size="10" type="text" name="editvalue1" value="$mingrentang[groupd]"></td>
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_19']}</button></TD>
+		</form>
+		<form method="post" name="del" action="plugin.php?id=dsu_paulfamehall:star&group=del&mrtgid=$mingrentang[id]&formhash={FORMHASH}" onSubmit="return delcheck()">
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_20']}</button></TD>
+		</form>
+		<form method="post" name="open" action="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=edituser&mrtgid=$mingrentang[id]&formhash={FORMHASH}">
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_21']}</button></TD>
+		</form>
+	</tr>
+	<!--{/loop}-->
+<!--{else}-->
+<tr><td colspan="7">{$lang['admin_22']}</td></tr>
+<!--{/if}-->
+<!--{else}-->
+					<tr class="colplural">
+						<th width="3%"></th>
+						<th width="7%">{$lang['admin_23']}</th>
+						<th width="15%">{$lang['admin_24']}</th>
+						<th width="35%">{$lang['admin_25']}</th>
+						<th width="18%">{$lang['admin_26']}</th>
+						<th width="10%">{$lang['admin_27']}</th>
+						<th width="10%">{$lang['admin_28']}</th>
+					</tr>
+<!--{if $mingrentangs}-->
+<SCRIPT type="text/javascript">
+function delcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_29']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+
+function editcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_30']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+</SCRIPT>
+	<!--{loop $mingrentangs $mingrentang}-->
+	<tr>
+		<td></td>
+		<form method="post" name="edit" action="plugin.php?id=dsu_paulfamehall:star&user=edit&useruid=$mingrentang[uid]&formhash={FORMHASH}" onSubmit="return editcheck()">
+		<td>$mingrentang[uid]</td>
+		<td>$mingrentang[username]</td>
+		<td><input size="40" type="text" name="editvalue" value="$mingrentang[value]"></td>
+		<td>$mingrentang[dateline]</td>
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_19']}</button></TD>
+		</form>
+		<form method="post" name="del" action="plugin.php?id=dsu_paulfamehall:star&user=del&useruid=$mingrentang[uid]&formhash={FORMHASH}" onSubmit="return delcheck()">
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_20']}</button></TD>
+		</form>
+	</tr>
+	<!--{/loop}-->
+<!--{else}-->
+<tr><td colspan="7">{$lang['admin_31']}</td></tr>
+<!--{/if}-->
+<!--{/if}-->
+				</table>
+			</div>
+<!--{elseif $_G['gp_operation'] == 'regedit'}-->
+			<div class="datalist">
+				<h1 class="mt">{$lang['admin_32']}</h1>
+				<table cellspacing="0" cellpadding="0" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+						<th width="10%">{$lang['admin_34']}</th>
+						<th width="8%">{$lang['admin_35']}</th>
+						<th width="8%">{$lang['admin_36']}</th>
+						<th width="15%">{$lang['admin_37']}</th>
+						<th width="15%">{$lang['admin_38']}</th>
+						<th width="20%">{$lang['sss_02']}</th>
+						<th width="12%">{$lang['admin_39']}</th>
+						<th width="12%">{$lang['admin_40']}</th>
+					</tr>
+<!--{if $mingrentangs}-->
+<SCRIPT type="text/javascript">
+function delcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_41']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+
+function editcheck()
+{
+ht = document.getElementsByTagName("html");
+ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+if (confirm("{$lang['admin_42']}"))
+{
+  return true;
+}
+else
+{
+  ht[0].style.filter = "";
+  return false;
+}
+}
+</SCRIPT>
+	<!--{loop $mingrentangs $mingrentang}-->
+	<tr>
+		<form method="post" name="edit" action="plugin.php?id=dsu_paulfamehall:star&user=pass&useruid=$mingrentang[userid]&formhash={FORMHASH}" onSubmit="return editcheck()">
+		<td><a href="home.php?mod=space&uid=$mingrentang[userid]">$mingrentang[username]</a><input name="name" type="text" id="name" value="$mingrentang[username]" style="display:none;"/><input name="about" type="text" id="about" value="$mingrentang[about]" style="display:none;"/></td>
+		<td>$mingrentang[posts]</td>
+		<td>$mingrentang[credits]</td>
+		<td>$mingrentang[regdate]</td>
+		<td>$mingrentang[dateline]</td>
+		<td><select name="gidu">
+	<!--{loop $rrs $rr}-->
+	<option value="$rr[id]" <!--{if $mingrentang['gid'] == $rr[id]}-->selected<!--{/if}-->>$rr[groupname]</option>
+	<!--{/loop}-->
+		</select></td>
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_43']}</button></TD>
+		</form>
+		<form method="post" name="del" action="plugin.php?id=dsu_paulfamehall:star&user=nopass&useruid=$mingrentang[userid]&formhash={FORMHASH}" onSubmit="return delcheck()">
+		<TD><button type="submit" class="submit" name="editsubmit" id="editsubmit" value="true">{$lang['admin_44']}</button></TD>
+		</form>
+	</tr>
+	<tr><td colspan="8">{$lang['admin_45']} {$mingrentang[about]}</td></tr>
+	<!--{/loop}-->
+<!--{else}-->
+<tr><td colspan="8">{$lang['admin_47']}</td></tr>
+<!--{/if}-->
+				</table>
+			</div>
+<!--{elseif $_G['gp_operation'] == 'addgroup'}-->
+	<h1 class="mt">{$lang['admin_04']}</h1>
+	{$lang['admin_48']}<br>{$lang['admin_83']}
+	<form method="post" name="submit" action="plugin.php?id=dsu_paulfamehall:star&group=add&formhash={FORMHASH}">
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<tr>
+						<th><label for="groupnew">{$lang['admin_49']}</label></th>
+						<td><input type="text" name="groupnew" id="groupnew" size="25" class="px" /></td>
+					</tr>
+					<tr>
+						<th><label for="groupdnew">{$lang['admin_50']}</label></th>
+						<td><input type="text" name="groupdnew" id="groupdnew" size="25" class="px" /></td>
+					</tr>
+					<tr>
+						<th><label for="grouppicnew">{$lang['admin_82']}</label></th>
+						<td><input type="text" name="grouppicnew" id="grouppicnew" size="25" class="px" /></td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<td><button type="submit" name="editsubmit" id="editsubmit" value="true" class="pn" /><em>{lang submit}</em></button></td>
+					</tr>
+				</table>
+	</form>
+<!--{elseif $_G['gp_operation'] == 'adduser'}-->
+	<h1 class="mt">{$lang['admin_05']}</h1>
+	{$lang['admin_51']}
+	<form method="post" name="submit" action="plugin.php?id=dsu_paulfamehall:star&user=add&formhash={FORMHASH}">
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<tr>
+						<th><label for="usernamenew">{$lang['admin_53']}</label></th>
+						<td><input type="text" name="usernamenew" id="usernamenew" size="25" class="px" /></td>
+					</tr>
+					<tr>
+						<th><label for="uservaluenew">{$lang['admin_54']}</label></th>
+						<td><textarea rows="3" cols="40" name="uservaluenew" id="uservaluenew" class="pt"></textarea></td>
+					</tr>
+					<tr>
+						<th>{$lang['admin_55']}</th>
+						<td>
+						<select name="groupsnew">
+<!--{if $mingrentangs}-->
+	<!--{loop $mingrentangs $mingrentang}-->
+	<option value="$mingrentang[id]">$mingrentang[groupname]</option>
+	<!--{/loop}-->
+<!--{else}-->
+<option value="0">{$lang['admin_56']}</option>
+<!--{/if}-->
+						</select>
+						</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<td><button type="submit" name="editsubmit" id="editsubmit" value="true" class="pn" /><em>{lang submit}</em></button></td>
+					</tr>
+				</table>
+	</form>
+<!--{elseif $_G['gp_operation'] == 'box'}-->
+				<h1 class="mt">{$lang['admin_07']}</h1>
+				<table cellspacing="0" cellpadding="0" class="tfm">
+	<tr>
+		<th><label for="update">{$lang['admin_57']}</label></th>
+		<form method="post" name="update" action="plugin.php?id=dsu_paulfamehall:star&set=update&formhash={FORMHASH}">
+		<TD><button type="submit" name="update" id="editsubmit" value="true" class="pn"><em>{$lang['admin_58']}</em></button></TD>
+		</form>
+	</tr>
+	<tr>
+		<th><label for="delmember">{$lang['admin_59']}</label></th>
+		<form method="post" name="del" action="plugin.php?id=dsu_paulfamehall:star&set=del&formhash={FORMHASH}">
+		<TD><button type="submit" name="delmember" id="editsubmit" value="true" class="pn"><em>{$lang['admin_60']}</em></button>&nbsp;&nbsp;<font color="red">{$lang['admin_61']}</font></TD>
+		</form>
+	</tr>
+	<form method="post" name="box" action="plugin.php?id=dsu_paulfamehall:star&set=box&formhash={FORMHASH}">
+	<tr>
+		<th><label for="openfamereg">{$lang['admin_62']}</label></th>
+		<td><input type="text" name="openfamereg" id="openfamereg" value="$settings[fame_openfamereg]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_79']}</td>
+	</tr>
+	<tr>
+		<th><label for="blackname">{$lang['admin_63']}</label></th>
+		<td><input type="text" name="blackname" id="blackname" value="$settings[fame_blackname]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_64']}</td>
+	</tr>
+	<tr>
+		<th><label for="minday">{$lang['admin_65']}</label></th>
+		<td><input type="text" name="minday" id="minday" value="$settings[fame_minday]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_66']}</td>
+	</tr>
+	<tr>
+		<th><label for="mincredit">{$lang['admin_67']}</label></th>
+		<td><input type="text" name="mincredit" id="mincredit" value="$settings[fame_mincredit]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_68']}</td>
+	</tr>
+	<tr>
+		<th><label for="minposts">{$lang['admin_69']}</label></th>
+		<td><input type="text" name="minposts" id="minposts" value="$settings[fame_minposts]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_70']}</td>
+	</tr>
+	<tr>
+		<th><label for="maxtext">{$lang['admin_71']}</label></th>
+		<td><input type="text" name="maxtext" id="maxtext" value="$settings[fame_maxtext]" size="30" class="px" />&nbsp;&nbsp;{$lang['admin_72']}</td>
+	</tr>
+	<tr>
+		<th><label for="kcrx">{$lang['sss_03']}</label></th>
+		<td><input type="text" name="kcrx" id="kcrx" value="$settings[fame_kcrx]" size="30" class="px" />&nbsp;&nbsp;{$lang['sss_04']}</td>
+	</tr>
+	<tr>
+		<th><label for="kcrz">{$lang['sss_05']}</label></th>
+		<td><input type="text" name="kcrz" id="kcrz" value="$settings[fame_kcrz]" size="30" class="px" />&nbsp;&nbsp;{$lang['sss_06']}</td>
+	</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<td><button type="submit" class="pn" name="editsubmit" id="editsubmit" value="true"><em>{lang submit}</em></button></td>
+					</tr>
+	</form>
+				</table>
+<!--{elseif $_G['gp_operation'] == 'color'}-->
+				<h1 class="mt">{$lang['admin_08']}</h1>
+<table cellspacing="0" cellpadding="0" class="tfm">
+	<form method="post" name="color" action="plugin.php?id=dsu_paulfamehall:star&set=color&formhash={FORMHASH}">
+	<tr>
+		<th><label for="newvalue1">{$lang['admin_73']}</label></th>
+		<td><input size="7" type="text" id="newvalue1" name="newvalue1" value="$settings[fame_frmcolor]" class="px"></td>
+	</tr>
+	<tr>
+		<th><label for="newvalue2">{$lang['admin_74']}</label></th>
+		<td><input size="7" type="text" id="newvalue2" name="newvalue2" value="$settings[fame_frmcoloract]" class="px"></td>
+	</tr>
+	<tr>
+		<th><label for="newvalue3">{$lang['admin_75']}</label></th>
+		<td><input size="7" type="text" id="newvalue3" name="newvalue3" value="$settings[fame_txtcolor]" class="px"></td>
+	</tr>
+	<tr>
+		<th><label for="newvalue4">defaultShape</label></th>
+		<td><input size="7" type="text" id="newvalue4" name="newvalue4" value="$settings[fame_dftshape]" class="px"></td>
+	</tr>
+	<tr>
+		<th><label for="newvalue5">solidShape</label></th>
+		<td><input size="7" type="text" id="newvalue5" name="newvalue5" value="$settings[fame_solidshape]" class="px"></td>
+	</tr>
+	<tr>
+		<th><label for="newvalue6">{$lang['admin_76']}</label></th>
+		<td><input size="30" type="text" id="newvalue6" name="newvalue6" value="$settings[fame_flashbg]" class="px">&nbsp;&nbsp;{$lang['admin_77']}</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th>
+		<td><button type="submit" class="pn" name="editsubmit" id="editsubmit" value="true"><em>{lang submit}</em></button></td>
+	</tr>
+	</form>
+</table>
+<!--{/if}-->
+	</div>
+	<div class="sd">
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['admin_78']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop">{$lang['admin_02']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=edituser">{$lang['admin_03']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=addgroup">{$lang['admin_04']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=adduser">{$lang['admin_05']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=regedit">{$lang['admin_06']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=box">{$lang['admin_07']}</a></li>
+					<li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=color">{$lang['admin_08']}</a></li>
+				</ul>
+			</div>
+	</div>
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['pt_01']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+					<li><a href="plugin.php?id=dsu_paulfamehall:star">{$lang['pt_03']}</a></li>
+				</ul>
+			</div>
+	</div>
+	</div>
+</div>
+{subtemplate common/footer}

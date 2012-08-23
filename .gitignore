@@ -1,0 +1,5 @@
+config/
+config.inc.php
+*.tmp
+.svn/
+.idea/

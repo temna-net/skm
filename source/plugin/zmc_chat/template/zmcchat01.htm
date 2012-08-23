@@ -1,0 +1,454 @@
+<div style="width:auto; -webkit-text-size-adjust:none; font-size:12px;{$bcolorbg01} margin:10px 0 10px 0; border:{$zmcg01[color01]} 1px solid; padding:5px 5px 7px 5px;{$bpicbg01}">
+<!--{if $zallowsay01 == 1}-->
+<div name="zimgurl01" id="zimgurl01" style="display:none;{$bcolorbg02} margin:5px 0 0 0; border:{$zmcg01[color02]} 1px solid; padding:8px;">
+{$eac01[zword09]}<br>
+<input type="text" name="imgurl02" id="imgurl02" size="80" maxlength="300" value="">
+<input type="button" name="bimgurl03" id="bimgurl03" style="height:22px;{$bcolorbg03} margin:0 0 0 2px; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword15]}" onclick="zurlimg02();">
+</div>
+<div name="zshowsmile01" id="zshowsmile01" style="display:none; overflow:auto; height:128px;{$bcolorbg02} margin:10px 0 0 0; border:{$zmcg01[color02]} 1px solid; padding:2px;"></div>
+<div name="zshowcolor01" id="zshowcolor01" style="display:none;{$bcolorbg02} margin:10px 0 0 0; border:{$zmcg01[color02]} 1px solid; padding:8px;">
+<input type="button" style="color:black; margin:1px; padding:1px;" value="black" onclick="pcolor01('black');">
+<input type="button" style="color:skyblue; margin:1px; padding:1px;" value="skyblue" onclick="pcolor01('skyblue');">
+<input type="button" style="color:royalblue; margin:1px; padding:1px;" value="royalblue" onclick="pcolor01('royalblue');">
+<input type="button" style="color:blue; margin:1px; padding:1px;" value="blue" onclick="pcolor01('blue');">
+<input type="button" style="color:darkblue; margin:1px; padding:1px;" value="darkblue" onclick="pcolor01('darkblue');">
+<input type="button" style="color:orange; margin:1px; padding:1px;" value="orange" onclick="pcolor01('orange');">
+<input type="button" style="color:orangered; margin:1px; padding:1px;" value="orangered" onclick="pcolor01('orangered');">
+<input type="button" style="color:crimson; margin:1px; padding:1px;" value="crimson" onclick="pcolor01('crimson');">
+<input type="button" style="color:red; margin:1px; padding:1px;" value="red" onclick="pcolor01('red');">
+<input type="button" style="color:firebrick; margin:1px; padding:1px;" value="firebrick" onclick="pcolor01('firebrick');">
+<input type="button" style="color:deeppink; margin:1px; padding:1px;" value="deeppink" onclick="pcolor01('deeppink');">
+<input type="button" style="color:darkred; margin:1px; padding:1px;" value="darkred" onclick="pcolor01('darkred');">
+<input type="button" style="color:green; margin:1px; padding:1px;" value="green" onclick="pcolor01('green');">
+<input type="button" style="color:limegreen; margin:1px; padding:1px;" value="limegreen" onclick="pcolor01('limegreen');">
+<input type="button" style="color:seagreen; margin:1px; padding:1px;" value="seagreen" onclick="pcolor01('seagreen');">
+<input type="button" style="color:teal; margin:1px; padding:1px;" value="teal" onclick="pcolor01('teal');">
+<input type="button" style="color:tomato; margin:1px; padding:1px;" value="tomato" onclick="pcolor01('tomato');">
+<input type="button" style="color:coral; margin:1px; padding:1px;" value="coral" onclick="pcolor01('coral');">
+<input type="button" style="color:purple; margin:1px; padding:1px;" value="purple" onclick="pcolor01('purple');">
+<input type="button" style="color:indigo; margin:1px; padding:1px;" value="indigo" onclick="pcolor01('indigo');">
+<input type="button" style="color:burlywood; margin:1px; padding:1px;" value="burlywood" onclick="pcolor01('burlywood');">
+<input type="button" style="color:sandybrown; margin:1px; padding:1px;" value="sandybrown" onclick="pcolor01('sandybrown');">
+<input type="button" style="color:sienna; margin:1px; padding:1px;" value="sienna" onclick="pcolor01('sienna');">
+<input type="button" style="color:chocolate; margin:1px; padding:1px;" value="chocolate" onclick="pcolor01('chocolate');">
+<input type="button" style="color:silver; margin:1px; padding:1px;" value="silver" onclick="pcolor01('silver');">
+</div>
+<div name="ztools02" id="ztools02" style="display:none; margin:10px 0 8px 0; padding:0;">
+<input type="button" name="zcolor01" id="zcolor01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword01]}" onclick="zjscolor01();">
+<input type="button" name="zsmile01" id="zsmile01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword02]}" onclick="zjssmile01();">
+<input type="button" name="zimage01" id="zimage01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword03]}" onclick="zurlimg01();">
+<input type="button" name="zsizebig01" id="zsizebig01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword04]}" onclick="zresize01(1);">
+<input type="button" name="zsizesmall01" id="zsizesmall01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword05]}" onclick="zresize01(0);">
+<input type="button" name="zclear01" id="zclear01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword06]}" onclick="zclearall01();">
+<!--{if $checkboss01 == 1}-->
+<input type="button" name="zcrsmile01" id="zcrsmile01" style="height:22px;{$bcolorbg03} margin:0 2px 0 0; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword14]}" onclick="zadminurl();">
+<!--{/if}-->
+</div>
+<div name="itosay20" id="itosay20" style="display:none; margin:3px 0 3px 0; padding:0;">
+<input type="button" name="cel02" id="cel02" style="height:24px;{$bcolorbg03} font-size:15px; margin:0 0 0 2px; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword18]}" onclick="cel01();">
+{$eac01[zword12]}&nbsp;<input type="text" name="itosay01" id="itosay01" size="15" maxlength="160" value="">&nbsp;{$eac01[zword13]}
+</div>
+<!--{/if}-->
+<div style="margin:0 0 7px 0; padding:0;">
+<!--{if $zallowsay01 == 1}-->
+<input type="text" name="pohtmtxt01" id="pohtmtxt01" size="100" maxlength="300" value="" onKeyDown="if(event.keyCode==13){restart01();}">
+<input type="button" name="zb02" id="zb02" style="height:24px;{$bcolorbg03} font-size:15px; margin:0 0 0 2px; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword16]}" onclick="ztools01();">
+<input type="button" name="zbutton01" id="zbutton01" style="height:24px;{$bcolorbg03} font-size:15px; margin:0 0 0 2px; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword07]}" onclick="restart01();">
+<span name="secdown01" id="secdown01"></span>
+<!--{else}-->
+<input type="button" name="zbutton02" id="zbutton02" style="height:24px;{$bcolorbg03} font-size:15px; margin:0 0 0 2px; border:{$zmcg01[color03]} 1px solid; padding:1px;" value="{$eac01[zword17]}" onclick="restart02();">
+<!--{/if}-->
+</div>
+<div style="overflow:auto; height:400px;{$bcolorbg02} margin:0; border:{$zmcg01[color02]} 1px solid; padding:7px 5px 7px 5px;" id="showword02"></div>
+{$zchattitle05}
+</div>
+<script type="text/javascript" src="./source/plugin/zmc_chat/zmcsmile.js"></script>
+<script type="text/javascript">
+var zname05 = "{$chatname01}";
+var zchar09 = "{$zchar01}";
+var zguest02 = "$zguest01";
+var zmcx01 = 1;
+var zmcx02 = parseInt({$zmcg01[offline]},10);
+var zmcsend01 = 0;
+var zsmilecode;
+var dzcode01;
+var dzcode02;
+var tmpImg01;
+var s01 = 0;
+var zreh01;
+var zreh02;
+var check01 = 1;
+var check02 = 0;
+var secwait02 = parseInt({$zmcg01[water]},10);
+var secwait01 = secwait02;
+var runtime01;
+var runtime02;
+var runtime03;
+var intosec01;
+var colorset01;
+var msncolor01 = "undefined";
+var zfirst01 = 1;
+var sendcolor01;
+var boxval01;
+var boxval02 = "{$eac01[zword10]}";
+var zsay01;
+var zoldtime01 = 1111111112;
+var zlastuptime01 = 1111111111;
+function zdg(IdNames){
+if(document.getElementById){ return document.getElementById(IdNames); }
+else if(document.all){ return document.all(IdNames); }
+else{ return false; }
+}
+function convtohtm(strz01){
+var c01 = ""; var c02 = ""; var cstr01 = "";
+for(i=0; i<strz01.length; i++){
+c01 = strz01.charAt(i);
+c02 = strz01.charCodeAt(i);
+if(c02 < 128){ cstr01 = cstr01 + c01.toString(); }
+else{ cstr01 = cstr01 + "&#" + c02.toString() + ";"; }
+}
+return cstr01;
+}
+function zstrrep(zs01){
+var zs02 = ""; var zs03 = "";
+zs02 = zs01.replace(/\[dzimg\](http[^\[\]]+)\[\/dzimg\]/gi,"<br><a href='$1' title='Click this image that view full it.' target=_blank><img src='$1' onload='AlumbImgz(this);' border=0></a><br>");
+zs03 = zs02.replace(/\[([a-zA-Z0-9_-]+(\.gif|\.jpg|\.png))\]/gi,"<img src='./source/plugin/zmc_chat/zsmile/$1' border=0>");
+return zs03;
+}
+function zmcRequest(){
+var zmcaj = false;
+if (window.XMLHttpRequest){
+zmcaj = new XMLHttpRequest();
+}else if(window.ActiveXObject){
+var zajver = ["Msxml2.XMLHTTP.7.0","Msxml2.XMLHTTP.6.0","Msxml2.XMLHTTP.5.0","MSXML2.XMLHTTP","MSXML.XMLHTTP","Microsoft.XMLHTTP"];
+for(var i=0; i<zajver.length; i++){
+try{
+zmcaj = new ActiveXObject(zajver[i]);
+if(zmcaj){ break; }
+}catch(e){}
+}
+}
+var zname02 = "";
+var content01 = "";
+var content02 = "";
+var sendstr01 = "";
+var sendstr02 = "";
+var zdatas02 = 0;
+var zfname02 = "";
+var zchar10 = "";
+var itosay02 = "";
+zdatas02 = encodeURIComponent("{$zmcg01[stores]}");
+zfname02 = encodeURIComponent("{$ftitle01}");
+zchar10 = encodeURIComponent(zchar09);
+if(zmcsend01 == 1){
+itosay02 = zdg("itosay01").value;
+if((itosay02 != "") && (itosay02 != null)){ content01 = "[To]" + itosay02 + "[/Say]" + zdg("pohtmtxt01").value; }else{ content01 = zdg("pohtmtxt01").value; }
+content01 = encodeURIComponent(content01);
+content02 = encodeURIComponent(msncolor01);
+zname02 = encodeURIComponent(zname05);
+}else{
+content01 = "";
+content02 = "";
+zname02 = "";
+}
+sendstr02 = "zdatas01=" + zdatas02 + "&zoldt01=" + zoldtime01 + "&zlastupt01=" + zlastuptime01 + "&ftitle02=" + zfname02 + "&zchar02=" + zchar10;
+if(zfirst01 == 1){
+sendstr01 = sendstr02 + "&zfirst01=1";
+zfirst01 = 0;
+}else{
+sendstr01 = sendstr02 + "&zname03=" + zname02 + "&txtolor01=" + content02 + "&zcmtxt01=" + content01;
+}
+zmcaj.open("POST","./source/plugin/zmc_chat/zmcchat.php",true);
+zmcaj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+zmcaj.send(sendstr01);
+zmcaj.onreadystatechange = function(){
+zmcalerttxt(zmcaj);
+overlen();
+};
+if(zmcsend01 == 1){ zdg("pohtmtxt01").value = ""; }
+zmcsend01 = 0;
+}
+function zmcalerttxt(zmcaj){
+if(zmcaj.readyState == 4){
+if(zmcaj.status == 200){
+var str001 = "";
+var str002 = new Array();
+var str004;
+var str005 = new Array();
+var str006 = "";
+var str007 = "";
+var str008 = "";
+var str009 = "";
+var str010 = "";
+var towho01;
+var mynick01 = "";
+var mynick02 = "";
+var str011 = new Array();
+var i01 = 0;
+var k01 = 0;
+var zname06 = "";
+if(zchar09 == "UTF-8"){ zname06 = zname05; }else{ zname06 = convtohtm(zname05); }
+str010 = zmcaj.responseText;
+str011 = str010.split("~~");
+zoldtime01 = str011[0];
+zlastuptime01 = str011[1];
+str001 = str011[2];
+str002 = str001.split("@@");
+i01 = str002.length - 1;
+if(i01 > 0){
+while(k01 < i01){
+str005 = str002[k01].split("|");
+str006 = transpotime01(str005[0]);
+mynick01 = "[To]" + zname06 + "[/Say]";
+mynick02 = "[To]" + str005[1] + "[/Say]";
+towho01 = str005[3].match(/^\[To\](.+)\[\/Say\]/g);
+if((zguest02 == "7") || (mynick01 == mynick02)){
+str008 = "<font color=royalblue>" + str005[1] + "</font>";
+}else{
+str008 = "<a href=javascript:ztosay01('" + str005[1] + "')><font color=royalblue>" + str005[1] + "</font></a>";
+}
+if((towho01 == null) || (towho01 == undefined)){
+str004 = zstrrep(str005[3]);
+}else{
+if((mynick01 == mynick02) || (mynick01 == towho01)){
+
+if((zguest02 == "7") || (mynick01 == towho01)){
+str009 = str005[3].replace(/^\[To\](.+)\[\/Say\]/g,"to <font color=skyblue>$1</font> say: ");
+}else{
+str009 = str005[3].replace(/^\[To\](.+)\[\/Say\]/g,"to <a href=javascript:ztosay01('$1')><font color=skyblue>$1</font></a> say: ");
+}
+str004 = zstrrep(str009);
+}else{
+str004 = "<font color=silver>~ ~ ~ &#24708; &#24708; {$eac01[zword08]} ~ ~ ~</font>";
+}
+}
+str007 = str007 + "<font color=#999999 size=1>" + str006 + "</font> " + str008 + " <font color=#CC9900 size=1>&gt;&gt;</font> ";
+if(str005[2] == "undefined"){
+str007 = str007 + str004 + "<br>";
+}else{
+str007 = str007 + "<font color=" + str005[2] + ">" + str004 + "</font><br>";
+}
+k01 = k01 + 1;
+}
+k01 = 0;
+zdg("showword02").innerHTML = str007 + zdg("showword02").innerHTML;
+}
+}
+}
+}
+function overlen(){
+var v01 = zdg("showword02").innerHTML;
+var v02;
+var v03 = "";
+var i02 = 0;
+v01 = v01.replace(/<BR>/gi,"<br>");
+v02 = v01.split("<br>");
+i02 = v02.length - 2;
+if(i02>300){
+for(j=0; j<i02; j++){
+v03 = v03 + v02[j] + "<br>";
+}
+zdg("showword02").innerHTML = v03;
+}
+}
+function ztosay01(zsay01){
+zdg("itosay20").style.display = "";
+zdg("itosay01").value = zsay01;
+zdg("itosay01").disabled = true;
+}
+function cel01(){
+zdg("itosay01").value = "";
+zdg("itosay20").style.display = "none";
+}
+function pcolor01(colorset01){
+msncolor01 = colorset01;
+zdg("pohtmtxt01").style.color = colorset01;
+zdg("zshowcolor01").style.display = "none";
+}
+function ztools01(){
+if(zdg("ztools02").style.display == "none"){
+zdg("ztools02").style.display = "";
+}else{
+zdg("ztools02").style.display = "none";
+zdg("zshowcolor01").style.display = "none";
+zdg("zshowsmile01").style.display = "none";
+zdg("zimgurl01").style.display = "none";
+}
+}
+function zurlimg01(){
+if(zdg("zimgurl01").style.display == "none"){
+zdg("zimgurl01").style.display = "";
+}else{
+zdg("zimgurl01").style.display = "none";
+}
+zdg("imgurl02").value = "";
+}
+function zurlimg02(){
+dzcode01 = zdg("imgurl02").value;
+if((dzcode01 != "") && (dzcode01 != null)){
+if(dzcode01.match(/^http.+(jpg|png|gif)$/gi)){
+dzcode02 = "[dzimg]" + dzcode01 + "[/dzimg]";
+zdg("pohtmtxt01").value += dzcode02;
+}
+zdg("imgurl02").value = "";
+}
+zdg("zimgurl01").style.display = "none";
+}
+function AlumbImgz(tmpImg01){
+var w=150;
+var image05;
+image05=new Image();
+image05.src=tmpImg01.src;
+if(image05.width>0){
+if(image05.width>w){
+tmpImg01.width=w;
+tmpImg01.height=(image05.height*w)/image05.width;
+}else{
+tmpImg01.width=image05.width;
+tmpImg01.height=image05.height;
+}
+}
+}
+function zjscolor01(){
+if(zdg("zshowcolor01").style.display == "none"){
+zdg("zshowcolor01").style.display = "";
+}else{
+zdg("zshowcolor01").style.display = "none";
+}
+}
+function zjssmile01(){
+if(zdg("zshowsmile01").style.display == "none"){
+zdg("zshowsmile01").style.display = "";
+zdg("zshowsmile01").innerHTML = zsmile03;
+}else{
+zdg("zshowsmile01").style.display = "none";
+}
+}
+function zintosmile(zsmilecode){
+zdg("pohtmtxt01").value += zsmilecode;
+zdg("zshowsmile01").style.display = "none";
+}
+function zresize01(s01){
+zreh01 = zdg("showword02").style.height;
+zreh02 = parseInt(zreh01,10);
+if(s01 == 1){
+zreh02 = parseInt(zreh02,10) + 50;
+if(zreh02 >= 2000){ return; }
+}else{
+zreh02 = parseInt(zreh02,10) - 50;
+if(zreh02 <= 50){ return; }
+}
+zdg("showword02").style.height = zreh02 + "px";
+}
+function zclearall01(){
+zdg("showword02").innerHTML = "";
+}
+function transpotime01(intosec01){
+var ztime01 = 0;
+var saytime01;
+var month03;
+var date03;
+var hour03;
+var min03;
+var saytime02 = "";
+ztime01 = parseInt(intosec01,10) * 1000;
+saytime01 = new Date(ztime01);
+month03 = saytime01.getMonth()+1;
+date03 = saytime01.getDate();
+hour03 = saytime01.getHours();
+min03 = saytime01.getMinutes();
+if(month03 < 10){ month03 = "0" + month03; }
+if(date03 < 10){ date03 = "0" + date03; }
+if(hour03 < 10){ hour03 = "0" + hour03; }
+if(min03 < 10){ min03 = "0" + min03; }
+saytime02 = month03 + "-" + date03 + " " + hour03 + ":" + min03;
+return saytime02;
+}
+<!--{if $zallowsay01 == 1}-->
+function zadminurl(){ location.href = "./source/plugin/zmc_chat/zadmin.php?ftitle02={$ftitle01}&zck02=yesdoit"; }
+function resendsec01(){
+if(secwait01 > 0){
+secwait01 = secwait01 - 1;
+zdg("secdown01").innerHTML = "(" + secwait01 + ")";
+runtime02 = window.setTimeout("resendsec01()",1000);
+}else{
+zdg("zbutton01").disabled = false;
+zdg("zbutton01").style.color = sendcolor01;
+zdg("secdown01").innerHTML = "";
+}
+}
+function regetval01(){
+if(check01 == 1){ zmcRequest(); }
+if(zmcx01 < zmcx02){
+clearTimeout(runtime01);
+zmcx01 = zmcx01 + 1 ;
+check01 = 1;
+runtime03 = {$zmcg01[secdata]} * 1000;
+runtime01 = window.setTimeout("regetval01()",runtime03);
+}else{
+zdg("zbutton01").value = boxval02;
+check02 = 1;
+}
+}
+function restart01(){
+if(zdg("zbutton01").disabled == false){
+zdg("zbutton01").value = boxval01;
+if(zdg("pohtmtxt01").value == ""){
+if(check02 == 1){
+zmcx01 = 1;
+check01 = 1;
+check02 = 0;
+}else{
+zdg("showword02").innerHTML = "PS{$eac01[zword11]}<br>" + zdg("showword02").innerHTML;
+zmcx01 = 0;
+check01 = 0;
+}
+}else{
+zmcx01 = 1;
+zmcsend01 = 1;
+check01 = 1;
+check02 = 0;
+secwait01 = secwait02;
+zdg("zbutton01").disabled = true;
+zdg("zbutton01").style.color = "#CCCCCC";
+resendsec01();
+}
+regetval01();
+}
+}
+boxval01 = zdg("zbutton01").value;
+zdg("zbutton01").disabled = true;
+sendcolor01 = zdg("zbutton01").style.color;
+zdg("zbutton01").style.color = "#CCCCCC";
+resendsec01();
+regetval01();
+<!--{else}-->
+function restart02(){
+if(zdg("zbutton02").disabled == false){
+zmcx01 = 1;
+zdg("zbutton02").value = boxval01;
+zdg("zbutton02").style.color = "#CCCCCC";
+zdg("zbutton02").disabled = true;
+regetval02();
+}
+}
+function regetval02(){
+zmcRequest();
+if(zmcx01 < zmcx02){
+clearTimeout(runtime01);
+zmcx01 = zmcx01 + 1 ;
+runtime03 = {$zmcg01[secdata]} * 1000;
+runtime01 = window.setTimeout("regetval02()",runtime03);
+}else{
+zdg("zbutton02").value = boxval02;
+zdg("zbutton02").disabled = false;
+zdg("zbutton02").style.color = sendcolor01;
+}
+}
+boxval01 = zdg("zbutton02").value;
+zdg("zbutton02").disabled = true;
+sendcolor01 = zdg("zbutton02").style.color;
+zdg("zbutton02").style.color = "#CCCCCC";
+regetval02();
+<!--{/if}-->
+</script>

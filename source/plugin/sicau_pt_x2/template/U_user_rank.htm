@@ -1,0 +1,39 @@
+<div>
+<p>共有 $total 用户在24小时内产生积分变化</p>
+<ol>
+	<li>一个种子正常情况下每半小时请求服务器一次，按照保种10个计算，每天变化次数为480次，如果有超过这个数字，需要警惕！</li>
+	<li>普通网卡（100Mbps）理论速度为12.5M/s，如果某用户24小时内流量超过200G，需要警惕！</li>
+	<li>黄色标记表示50%可能有刷流量行为</li>
+	<li>橙色标记表示99%可能有刷流量行为</li>
+</ol>
+<table width="800" border="0" color="" cellspacing="1" cellpadding="0" class="dt mtm">
+<caption><h2 class="mbm xs2">最近24小时积分变化排行</h2></caption>
+<tbody>
+  <tr style="background-color:#E8F0F7;">
+    <td>
+		<a href="home.php?mod=spacecp&ac=plugin&id=sicau_pt_x2:U_user_rank&order=uid">用户UID</a>
+	</td>
+    <td>
+		<a href="home.php?mod=spacecp&ac=plugin&id=sicau_pt_x2:U_user_rank&order=count">积分变化次数</a>
+	</td>
+    <td>
+		<a href="home.php?mod=spacecp&ac=plugin&id=sicau_pt_x2:U_user_rank&order=up">上传总量</a>
+	</td>
+    <td>
+		<a href="home.php?mod=spacecp&ac=plugin&id=sicau_pt_x2:U_user_rank&order=down">下载总量</a>
+	</td>
+  </tr>
+<!--{loop $historys $history}-->
+  <tr style="height:26px;background-color:$history[color] ;">
+    <td><a href="home.php?mod=spacecp&ac=plugin&id=sicau_pt_x2:U_user_history&uid=$history[uid]" target="_blank">$history['uid']</a></td>
+    
+    <td>$history[count]</td>
+    <td>$history[up]</td>
+    <td>$history[down]</td>
+  </tr>
+<!--{/loop}-->
+</tbody>
+</table>
+</div>
+<br/>
+$turnpage

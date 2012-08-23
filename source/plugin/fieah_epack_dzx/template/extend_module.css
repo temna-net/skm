@@ -1,0 +1,18 @@
+/*
+ * =============================================
+ * Discuz!X2 Extend pack
+ * ---------------------------------------------
+ * Fieah Workshop [www.fieah.com] (C)Forever.
+ * Author: Kinwei 'Fieah' Lim
+ * Email : f@12345.la
+ * For Ashlyn Cheng & DDB, love you all.
+ * =============================================
+*/
+
+/** forum::viewthread **/
+.modarea { padding: 5px 10px; border: 1px solid #CDCDCD; }
+	.bui .modarea { width: 260px; margin: 0; }
+	.ie_all .modarea legend { margin-bottom: 5px; }
+	.modarea img { margin: 0; }
+	.modarea a { margin-right: 10px; }
+/** end **/

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-07-20 21:06]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://a.dev.jhdxr.com/dx2/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[¡¾DSU¡¿Ñ«ÕÂÖÐÐÄ]]></item>
+			<item id="identifier"><![CDATA[dsu_medalCenter]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_medalCenter/]]></item>
+			<item id="copyright"><![CDATA[Discuz Student Union  www.dsu.cc]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admin_manage]]></item>
+					<item id="menu"><![CDATA[¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[11]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin_type]]></item>
+					<item id="menu"><![CDATA[·ÖÀà]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[12]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_confer]]></item>
+					<item id="menu"><![CDATA[°ä·¢]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[13]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[admin_mod]]></item>
+					<item id="menu"><![CDATA[ÉóºË]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[14]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[admin_recover]]></item>
+					<item id="menu"><![CDATA[»ØÊÕ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[15]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[admin_extend]]></item>
+					<item id="menu"><![CDATA[À©Õ¹¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[128]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[Ñ«ÕÂÏÔÊ¾ÊýÁ¿ÉÏÏÞ]]></item>
+				<item id="description"><![CDATA[0»òÁô¿Õ´ú±í²»ÏÞÖÆ]]></item>
+				<item id="variable"><![CDATA[showMedalLimit]]></item>
+				<item id="type"><![CDATA[group_text]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="10"><![CDATA[5]]></item>
+					<item id="1"><![CDATA[5]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[setup.php]]></item>
+		<item id="uninstallfile"><![CDATA[setup.php]]></item>
+		<item id="upgradefile"><![CDATA[setup.php]]></item>
+		<item id="license"><![CDATA[°æÈ¨ËùÓÐ (C) 2007-2011, ½­ºþ´óÏºÈÊ ±£ÁôËùÓÐÈ¨Àû
+	¸ÐÐ»ÄúÑ¡Ôñ ½­ºþ´óÏºÈÊ ¿ª·¢µÄ²úÆ·£¬Ï£ÍûÎÒÃÇµÄÅ¬Á¦ÄÜÎªÄúÓµÓÐ¸ü¶àÊ±¼ä¹Ø×¢ÍøÕ¾ÔËÓª¡£
+	µã»÷Í¬Òâ±íÊ¾Äú½ÓÊÜÐ­Òé ([url=http://www.jhdxr.com/blog/html/tech/discuz/czw_license.html]Çëµã»÷ÕâÀïÔÄ¶Á[/url])£¬·ñÔòÇëµã»÷È¡Ïû¡£]]></item>
+	</item>
+</root>

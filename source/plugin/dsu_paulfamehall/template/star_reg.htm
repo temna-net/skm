@@ -1,0 +1,155 @@
+{subtemplate common/header}
+<style> 
+.datalist { zoom: 1; }
+.datalist table { margin-bottom: 30px; width: 100%; border: 1px solid #E6E7E1; }
+.datalist th, .datalist td { padding: 4px 5px; border: 1px solid #E6E7E1; font-weight: 400; }
+.datalist th img { vertical-align: top; }
+.datalist table .stat_subject { border-right: none; }
+.datalist table .stat_num { padding-right: 15px; text-align: right; border-left: none; }
+.datalist .datatable { margin-bottom: 10px; }
+.datalist .datatable, .datalist .datatable th, .datalist .datatable td { border-width: 1px 0; }
+.datalist .fixtable { table-layout: fixed; }
+.colplural, .colplural th, .colplural td, th.highlight, td.highlight { background-color: #F5F5F5; }
+.qdsmile{padding:3px;margin:auto;float:left;list-style:none;float:left}
+.qdsmile li{float: left;width:40px;padding:5px .6em;border:2px #fff solid;}
+.qdsmile li:hover{cursor:pointer;background:#F7FAFF;border:2px dashed #D1D8D8;}
+</style>
+<div id="pt" class="bm cl"><div class="z">
+<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulfamehall:star&action=famereg">{$lang['reg_01']}</a></div> 
+</div>
+<div id="ct" class="ct2 wp cl">
+<div class="mn">
+<!--{if $_G[uid] && $_G[adminid] == 1}-->
+<h1 class="mt">{$lang['reg_02']}</h1>
+{$lang['reg_03']}
+<!--{else}-->
+<!--{if $_G['gp_reg'] == ''}-->
+<h1 class="mt">{$lang['reg_04']}</h1>
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+							<th width="30%">{$lang['reg_05']}</th>
+							<th width="30%">{$lang['reg_06']}</th>
+							<th width="40%">{$lang['reg_07']}</th>
+					</tr>
+					<tr>
+							<td>$maxregdate</td>
+							<td>$regdate</td>
+							<td><!--{if $regdate >= $maxregdate}--><img src="static/image/common/data_valid.gif" /><!--{else}--><img src="static/image/common/data_invalid.gif" /><!--{/if}--></td>
+					</tr>
+					<tr class="colplural">
+							<th width="30%">{$lang['reg_08']}</th>
+							<th width="30%">{$lang['reg_09']}</th>
+							<th width="40%">{$lang['reg_07']}</th>
+					</tr>
+					<tr>
+							<td>$ch_credit</td>
+							<td>$post[credits]</td>
+							<td><!--{if $post[credits] >= $ch_credit}--><img src="static/image/common/data_valid.gif" /><!--{else}--><img src="static/image/common/data_invalid.gif" /><!--{/if}--></td>
+					</tr>
+					<tr class="colplural">
+							<th width="30%">{$lang['reg_10']}</th>
+							<th width="30%">{$lang['reg_11']}</th>
+							<th width="40%">{$lang['reg_07']}</th>
+					</tr>
+					<tr>
+							<td>$maxposts</td>
+							<td>$post[posts]</td>
+							<td><!--{if $post[posts] >= $maxposts}--><img src="static/image/common/data_valid.gif" /><!--{else}--><img src="static/image/common/data_invalid.gif" /><!--{/if}--></td>
+					</tr>
+					<tr class="colplural">
+							<th width="30%">{$lang['reg_12']}</th>
+							<th width="30%"></th>
+							<th width="40%">
+							<!--{if $regdate >= $maxregdate}-->
+								<!--{if $post[credits] >= $ch_credit}-->
+									<!--{if $post[posts] >= $maxposts}-->
+										{$lang['reg_13']}
+									<!--{else}-->
+										<font color=red>{$lang['reg_14']}</font>
+									<!--{/if}-->
+								<!--{else}-->
+									<font color=red>{$lang['reg_15']}<!--{if $post[posts] >= $maxposts}--><!--{else}-->{$lang['reg_16']}<!--{/if}-->{$lang['reg_17']}</font>
+								<!--{/if}-->
+							<!--{else}-->
+								<font color=red>{$lang['reg_18']}<!--{if $post[credits] >= $ch_credit}--><!--{else}-->{$lang['reg_19']}<!--{/if}--><!--{if $post[posts] >= $maxposts}--><!--{else}-->{$lang['reg_16']}<!--{/if}-->{$lang['reg_17']}</font>
+							<!--{/if}-->
+							</th>
+					</tr>				
+					<!--{if $kcrz != '0' }-->
+					<tr>
+							<td colspan="2">{$lang['sss_07']} {$_G[setting][extcredits][$kcrx][title]} $kcrz {$_G[setting][extcredits][$kcrx][unit]} {$lang['sss_08']} {$_G[setting][extcredits][$kcrx][title]} {$post[extcredits.$kcrx]} {$_G[setting][extcredits][$kcrx][unit]}</td>
+							<td><!--{if $post[extcredits.$kcrx] >= $kcrz}--><font color=green>{$lang['sss_09']}</font><!--{else}--><font color=red>{$lang['sss_10']}</font><!--{/if}--></td>
+					</tr>
+					<!--{/if}-->
+				</table>
+			</div>
+			<div align="right"><!--{if $regdate >= $maxregdate}--><!--{if $post[credits] >= $ch_credit}--><!--{if $post[posts] >= $maxposts}--><!--{if $post[extcredits.$kcrx] >= $kcrz || $kcrz = '0'}--><form method="post" name="submit" action="plugin.php?id=dsu_paulfamehall:star&action=famereg&reg=thesecondstep"><td><button type="submit" class="pn" name="editsubmit" id="editsubmit" value="true"><em>{$lang['reg_21']}</em></button></td></form><!--{else}--><font color=red>{$lang['reg_20']}</font><!--{/if}--><!--{else}--><font color=red>{$lang['reg_20']}</font><!--{/if}--><!--{else}--><font color=red>{$lang['reg_20']}</font><!--{/if}--><!--{else}--><font color=red>{$lang['reg_20']}</font><!--{/if}--></div>
+<!--{elseif $_G['gp_reg'] == 'thesecondstep'}-->
+<h1 class="mt">{$lang['reg_22']}</h1>
+				<table cellspacing="0" cellpadding="0" class="tfm">
+				<form method="post" name="regnow" action="plugin.php?id=dsu_paulfamehall:star&action=famereg&reg=regnow&formhash={FORMHASH}">
+					<input type="hidden" size="37" name="email" value="$email" style="font-family: Verdana; font-size: 9pt" class="px" readonly>
+					<tr>
+						<th align="middle">{$lang['reg_23']}$maxabout<br>{$lang['reg_24']}</th>
+						<td><textarea rows="3" cols="40" name="about" class="pt"></textarea></td>
+					</tr>
+					<tr>
+						<th>{$lang['reg_25']}</th>
+						<td>
+						<select name="groupsnew">
+<!--{if $mingrentangs}-->
+	<!--{loop $mingrentangs $mingrentang}-->
+	<option value="$mingrentang[id]">$mingrentang[groupname]</option>
+	<!--{/loop}-->
+<!--{else}-->
+<option value="0">{$lang['reg_26']}</option>
+<!--{/if}-->
+						</select>
+						</td>
+					</tr>
+					<tr class="category" align="center"><td width="100%" colspan="2">
+					<!--{if $maxregdate > $regdate}-->
+					<font color=red>{$lang['reg_27']}</font>
+					<!--{else}-->
+					<!--{if $post[credits] >= $ch_credit || $post[posts] >= $maxposts}-->
+					<button type="submit" class="pn" name="submit" id="submit" value="true"><em>{$lang['reg_29']}</em></button>
+					 &nbsp; <button type="reset" class="pn" name="reset" id="reset" value="true"><em>{$lang['reg_30']}</em></button>
+					<!--{else}-->
+					<font color=red>{$lang['reg_28']}</font>
+					<!--{/if}-->
+					<!--{/if}-->
+					</td></tr>
+				</form>
+				</table>
+<!--{/if}-->
+<!--{/if}-->
+	</div>
+
+	<div class="sd">
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['verinfo']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li><a href="{$fameadd}" title="{$lang['verinfo1']}" target="_blank"><span style="font: bold 14px Arial; color: #fbb040;">[DSU]</span><span style="font: bold 12px Verdana; color: #f15a29;">Hall Of Fame</span></a><span style="font: normal 9px Verdana; display:block;">Ver <a href="{$fameadd}" title="{$lang['verinfo2']}" style="font: bold 9px Verdana;">$famever</a> Build $fameBuild</span></li>
+				</ul>
+			</div>
+	</div>
+<!--{if $_G[uid] && $_G[adminid] == 1}-->
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['pt_01']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<!--{if $_G[uid] && $_G[adminid] == 1}--><li><a href="plugin.php?id=dsu_paulfamehall:star&action=adminop&operation=regedit">{$lang['pt_02']}</a></li><!--{/if}-->
+						<li><a href="plugin.php?id=dsu_paulfamehall:star">{$lang['pt_03']}</a></li>
+				</ul>
+			</div>
+	</div>
+<!--{/if}-->
+	</div>
+</div>
+{subtemplate common/footer}

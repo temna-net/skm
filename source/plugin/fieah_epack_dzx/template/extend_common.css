@@ -1,0 +1,25 @@
+/*
+ * =============================================
+ * Discuz!X2 Extend pack
+ * ---------------------------------------------
+ * Fieah Workshop [www.fieah.com] (C)Forever.
+ * Author: Kinwei 'Fieah' Lim
+ * Email : f@12345.la
+ * For Ashlyn Cheng & DDB, love you all.
+ * =============================================
+*/
+
+* html { background-image: url(about:blank); background-attachment: fixed; }
+
+#epackbar em { background: url({IMGDIR}/app_set.gif) no-repeat 0 50%; padding-left: 20px; }
+
+#epackbar { position: fixed; bottom:0; left: 0; background: #F5F5F5; border-top: 4px solid #D3D3D3; padding: 5px; width: 100%; }
+	.ie6 #epackbar { position: absolute; bottom: auto; top: expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight - this.offsetHeight - (parseInt(this.currentStyle.marginTop, 10) || 0) - (parseInt(this.currentStyle.marginBottom, 10) || 0))); padding: 5px 0; }
+	#epackbar em { font-weight: 700; }
+		#epackbar em.ottff { background-image: url(../../source/plugin/fieah_epack_dzx/template/ottff.png); }
+			.ie6 #epackbar em.ottff { background-position: 5px 50%; padding-left: 25px; }
+		#epackbar em.dtl { background-image: url({IMGDIR}/app_set.gif); }
+	#epackbar form { display: inline; }
+	#epackbar input { vertical-align: middle; }
+	#epackbar button { margin-left: 2px; }
+	#epackbar .flbc { width: 30px; }

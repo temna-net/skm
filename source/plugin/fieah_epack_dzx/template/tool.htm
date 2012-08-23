@@ -1,0 +1,59 @@
+<!--{block return}-->
+    <!--{if $top}-->
+        <span class="pipe">|</span><a href="javascript:;" id="epack">{lang fieah_epack_dzx:tools}</a>
+        <script>
+        $('epack').onclick = function() {
+	        window.location.href = ((window.location.href + '').replace(/[?&]tool=yes/g, '').split('#')[0] + ( window.location.search && window.location.search.indexOf('?tool=yes') < 0 ? '&tool=yes' : '?tool=yes'));
+            return false;
+        }
+        </script>
+    <!--{else}-->
+        <div id="epackbar" class="cl">
+            <span class="y"><a class="flbc" id="epack_close" href="javascript:;"></a></span>
+            <a href="http://www.12345.la" target="_blank"><em class="ottff">{lang fieah_epack_dzx:ottff}</em></a> &raquo;
+            <a href="http://www.12345.la/forum-75-1.html" target="_blank">{lang fieah_epack_dzx:ask}</a><span class="pipe">|</span>
+            <a href="http://www.12345.la/forum-91-1.html" target="_blank">{lang fieah_epack_dzx:share}</a><span class="pipe">||</span>
+            <em class="dtl">{lang fieah_epack_dzx:tool}</em> &raquo;
+            <a href="javascript:;" id="epack_refresh">{lang fieah_epack_dzx:refresh}</a><span class="pipe">|</span>
+            <a href="javascript:;" id="epack_firebug">Firebug</a><span class="pipe">|</span>
+            <!--{if $isfounder}-->
+                <form method="post" target="_blank">
+                    <input type="hidden" name="formhash" value="{FORMHASH}" />
+                    {lang fieah_epack_dzx:print}GLOBALS <input type="text" name="epack_viewglobal" id="epack_viewglobal" class="px" style="width: 80px;" value="" />
+                    <button name="epack_viewglobalsubmit" id="epack_viewglobalsubmit" value="true" class="pn vm" type="submit"><strong>{lang fieah_epack_dzx:view}</strong></button>
+                </form>
+                <span class="pipe">|</span>
+            <!--{/if}-->
+            <iframe id="epack_frame" name="epack_frame" style="display: none"></iframe>
+            <form method="post" action="forum.php" target="epack_frame">
+                <input type="hidden" name="formhash" value="{FORMHASH}" />
+                <input type="checkbox" name="epack_cache[]" value="data" checked="" />{lang fieah_epack_dzx:update}{lang fieah_epack_dzx:data}
+                <input type="checkbox" name="epack_cache[]" value="tpl" checked="" />{lang fieah_epack_dzx:update}{lang fieah_epack_dzx:tpl}
+                <input type="checkbox" name="epack_cache[]" value="block" />{lang fieah_epack_dzx:update}{lang fieah_epack_dzx:DIY}
+                <button name="epack_cachesubmit" value="true" class="pn vm" id="epack_cachesubmit" type="submit"><strong>{lang confirms}</strong></button>
+            </form>
+            <span id="epack_waitid"></span>
+        </div>
+        <script>
+        $('epack_refresh').onclick = function() {
+		    location.reload();
+	    }
+
+        $('epack_firebug').onclick = function() {
+	    	if($('firebug-lite')) return;
+		    appendscript('https://getfirebug.com/firebug-lite.js');
+            $('epack_close').style.width = '70px';
+            return false;
+	    }
+
+        _attachEvent($('epack_cachesubmit'), 'click', function() {
+		    $('epack_waitid').innerHTML = '<img src="' + IMGDIR + '/loading.gif" class="vm"> {lang fieah_epack_dzx:updating}';
+	    });
+
+        $('epack_close').onclick = function() {
+            window.location.href = window.location.href.replace(/[\?|\&]tool\=yes/g, '');
+            return false;
+        }
+        </script>
+    <!--{/if}-->
+<!--{/block}-->

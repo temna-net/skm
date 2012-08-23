@@ -1,0 +1,67 @@
+<form id="form1"  onsubmit="return checkform()" name="form1" method="post" action="home.php?mod=spacecp&ac=plugin&id=sicau_realname:action&sarea={$sarea}" autocomplete="off">
+    <input name="area" type="hidden" value="{$area}" />
+    <table cellspacing="0" cellpadding="0" class="tfm">
+        <tr>
+            <th colspan="2" class="xs2 xw1">
+                请输入你在川农教务管理的学号和密码进行身份验证
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2" class="xs2 xw1">
+                认证系统由于网络原因可能会需要多次才能成功，如果三次还未成功请联系管理员
+            </th>
+        </tr>
+        <tr>
+            <th>
+                用户类型：
+            </th>
+            <td class="pns">
+                <label><input type="radio" name="sarea" value="ya" onclick="selectarea(this)" <!--{if !$sarea || $sarea=='ya'}-->checked="checked"<!--{/if}--> />雅安·成都&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label><input type="radio" name="sarea" value="djy" onclick="selectarea(this)" <!--{if $sarea=='djy'}-->checked="checked"<!--{/if}--> />都江堰&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label><input type="radio" name="sarea" value="yjs" onclick="selectarea(this)" <!--{if $sarea=='yjs'}-->checked="checked"<!--{/if}--> />研究生</label>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                学号:
+            </th>
+            <td class="pns">
+                <input type="text" name="user" id="user" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                密码:
+            </th>
+            <td class="pns">
+                <input type="password" name="pwd" id="pwd" />
+            </td>
+        </tr>
+        <!--{if 'yjs'==$sarea}-->
+        <tr>
+            <th>
+                类别:
+            </th>
+            <td class="pns">
+                <select name="usertype">
+                    <option value="2">学生</option>
+                    <option value="1">教师</option>
+                    <option value="3">教务员</option>
+                    <option value="4">管理员</option>
+                </select>
+            </td>
+        </tr>
+        <!--{/if}-->
+        <tr>
+            <th colspan="2">
+                <input class="pn vm" type="submit" name="submit" id="submit" value="提交" />
+            </th>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    function selectarea(e){
+        document.location.href='home.php?mod=spacecp&ac=plugin&id=sicau_realname:start&sarea='+e.value;
+    }
+    {$jsScript}
+</script>

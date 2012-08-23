@@ -1,0 +1,41 @@
+{template common/header}
+
+<div class="bm bw0">
+	<h3 class="flb">
+		<em id="return_message">$_G['setting']['bbname']-{lang mo_qqgroup_dzx:mo_group}</em>
+		<!--{if $_G[inajax]}-->
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('mo_qqgroup_dzx')" title="{lang close}">{lang close}</a></span>
+		<!--{/if}-->
+	</h3>
+	<div class="c">
+		<!--{if $qqgroup}-->
+		<table border="0" cellspacing="0" cellpadding="6" align="center">
+			<tr>
+			<!--{loop $qqgroup $key $value}-->
+			<!--{if $key!=0 and $key%$mo_cfg['gnum']==0}-->
+			</tr><tr>
+			<!--{/if}-->
+				<!--{if $mo_cfg[gavatar]==1}-->
+				<td><a href="http://qun.qq.com/air/#$value[0]" target="_blank" title="{lang mo_qqgroup_dzx:mo_group7}"><img src="http://face7.qun.qq.com/cgi/svr/face/getface?type=4&fid=2002&uin=$value[0]" height="24" style="padding:1px;border:1px #ccc solid;"/></a></td>
+				<!--{/if}-->
+				<td><b>$value[1]</b></td>
+				<td>
+					<!--{if $value[2]==1}--><a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/$value[0]"><!--{/if}-->
+						<img src="$moroot/icon/{$value[2]}.gif" title="<!--{if $value[2]==1}-->{lang mo_qqgroup_dzx:mo_group1}<!--{elseif $value[2]==2}-->{lang mo_qqgroup_dzx:mo_group2}<!--{elseif $value[2]==3}-->{lang mo_qqgroup_dzx:mo_group3}<!--{/if}-->">
+					<!--{if $value[2]==1}--></a><!--{/if}-->
+					<a href="javascript:;" onclick="setCopy('$value[0]', '{lang mo_qqgroup_dzx:mo_group5}');" title="{lang mo_qqgroup_dzx:mo_group4}"><img src="$moroot/icon/copy.gif"></a>
+				</td>
+				<td><!--{if $value[3]}-->[{$value[3]}]<!--{/if}--></td>
+			<!--{/loop}-->
+			</tr>
+		</table>
+		<p style="border:1px dashed #CCC; border-width:1px 0; padding:6px; margin:10px 0 5px;">$mo_notice</p>
+		<!--{else}-->
+			<center style="height:60px; line-height:60px; font-weight:bold; font-size:16px;">{lang mo_qqgroup_dzx:mo_group6}</center>
+		<!--{/if}-->
+	</div>
+	<!--{if $_G[inajax]}-->
+	<center><button type="button" class="pn pnc" onclick="hideWindow('mo_qqgroup_dzx');"><strong>{lang close}</strong></button></center>
+	<!--{/if}-->
+</div>
+{template common/footer}

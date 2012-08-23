@@ -1,0 +1,27 @@
+/*
+[name]蓝[/name]
+[iconbgcolor]#0053B9[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+body { background: #FFF url(bgimg.jpg) no-repeat 50% 0; }
+#nv { overflow: hidden; padding-left: 3px; height: 33px; {MENUBGCODE}; padding-left: 5px; }
+				#nv li { float: left; padding-right: 1px; height: 33px; line-height: 33px;font-weight: 700; font-size: 14px; }
+					.ie_all #nv li { line-height: 36px; }
+					.ie6 #nv li { line-height: 33px; }
+					#nv li a { float: left; padding: 0 20px; height: 33px; }
+						#nv li a { color: {MENUTEXT}; padding-left: 12px; text-shadow: 0.1em 0.1em 0.05em #333; }
+						#nv li span { display: none; }
+					#nv li.a { margin-left: -1px; {MENUHOVERBGCODE}; }
+					.ie6 #nv li.a { margin-left: -1px; background: url(nva_r1_c2_ie6.png) no-repeat top right; }
+					#nv li.left { float:left display: block; width: 12px; height:33px; background: url(nva_r1_c1.png) no-repeat top right; }
+					.ie6 #nv li.left { float:left display: block; width: 12px; height:33px; background: url(nva_r1_c1_ie6.png) no-repeat top right; }
+						#nv li.a a { color: {MENUHOVERTEXT}; text-shadow: 0.1em 0.1em 0.05em #f1f1f1; }
+						#nv li a:hover { background: none;text-shadow: 0 0 0.2em #0099bb, 0 0 0.2em #0099bb, 0 0 0.2em #0099bb; }
+						#nv li.a a:hover{ text-shadow: none; }
+/*
+#nv { background-image: url(nv.png); }
+	#nv li { background-image: url(nv_a.png) !important; }
+	#nv li.a { padding-right: 4px; background: #FFF url(nv_a.png) no-repeat 100% 100%; }
+		#nv li.a a, #nv li.a a:hover { background: #EEE url(nv_a.png) no-repeat 0 -33px; color: #369 !important; }
+*/

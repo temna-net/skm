@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-23 12:22]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost:1108/x20/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[各种增强包]]></item>
+			<item id="identifier"><![CDATA[fieah_epack_dzx]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[fieah_epack_dzx/]]></item>
+			<item id="copyright"><![CDATA[Fieah (www.fieah.com)]]></item>
+			<item id="version"><![CDATA[2.3]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[epack]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[帖内区分楼主和自己的回复]]></item>
+				<item id="description"><![CDATA[在帖子内容上方会有个明显的标示，让浏览者更方便的辨识自己的回复。]]></item>
+				<item id="variable"><![CDATA[authororself]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[允许使用点评的版块]]></item>
+				<item id="description"><![CDATA[设置仅指定版块可使用点评功能。
+管理组不受此限制。
+留空为不限制版块。]]></item>
+				<item id="variable"><![CDATA[allowcommentforums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[启用页面调试工具]]></item>
+				<item id="description"><![CDATA[启用后，管理员可在前台更快捷的进行页面调试工作。]]></item>
+				<item id="variable"><![CDATA[allowtool]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[帖内版主管辖显示位置]]></item>
+				<item id="description"><![CDATA[开启后，在帖子作者个人信息中显示管理的版块列表。]]></item>
+				<item id="variable"><![CDATA[plsmodarea]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 不显示
+1 = 头像菜单(推荐)
+2 = 帖内左侧]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[允许使用回帖仅作者可见]]></item>
+				<item id="description"><![CDATA[设置仅指定用户组可使用回帖仅作者可见功能，以避免管理上的麻烦。
+管理组不受此限制。
+留空为不限制用户组。]]></item>
+				<item id="variable"><![CDATA[allowhiddenreplygroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[关闭标题栏新提醒闪动]]></item>
+				<item id="description"><![CDATA[关闭后，当有新提醒时，标题栏将不再有闪烁通知。]]></item>
+				<item id="variable"><![CDATA[disblink]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[帖内个人信息宽度]]></item>
+				<item id="description"><![CDATA[如果帖内个人信息内容丰富，可以修改此处以达到更好的显示效果。]]></item>
+				<item id="variable"><![CDATA[adjustpls]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[180]]></item>
+				<item id="extra"><![CDATA[160 = 160px(默认)
+180 = 180px
+200 = 200px]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[发帖自动设置阅读权限]]></item>
+				<item id="description"><![CDATA[发帖时，帖子阅读权限默认为255，适用于提交私密信息的版块。
+您需要在用户组中允许设置帖子权限。
+管理组不受此限制。
+留空为不使用。]]></item>
+				<item id="variable"><![CDATA[postreadpermforums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[列表页自己的主题粗体显示]]></item>
+				<item id="description"><![CDATA[让用户能在帖子列表页中更容易找到自己发布的主题。]]></item>
+				<item id="variable"><![CDATA[selfhighlight]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="cachedone"><![CDATA[缓存更新完毕]]></item>
+				<item id="modarea"><![CDATA[管理以下版块]]></item>
+				<item id="author"><![CDATA[楼主]]></item>
+				<item id="self"><![CDATA[自己]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="tools"><![CDATA[调试工具]]></item>
+				<item id="ottff"><![CDATA[壹贰叁肆伍社区]]></item>
+				<item id="ask"><![CDATA[在线提问]]></item>
+				<item id="share"><![CDATA[分享资源]]></item>
+				<item id="tool"><![CDATA[工具]]></item>
+				<item id="update"><![CDATA[更新]]></item>
+				<item id="data"><![CDATA[数据缓存]]></item>
+				<item id="tpl"><![CDATA[模板缓存]]></item>
+				<item id="DIY"><![CDATA[DIY缓存]]></item>
+				<item id="updating"><![CDATA[缓存更新中...]]></item>
+				<item id="refresh"><![CDATA[刷新页面]]></item>
+				<item id="done"><![CDATA[更新完毕]]></item>
+				<item id="notice"><![CDATA[提示]]></item>
+				<item id="view"><![CDATA[查看]]></item>
+				<item id="print"><![CDATA[打印]]></item>
+			</item>
+		</item>
+	</item>
+</root>

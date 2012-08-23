@@ -1,0 +1,36 @@
+<!--{subtemplate common/header_ajax}-->
+<div class="f_c">
+ <h3 class="flb"> <em>编辑对应豆瓣链接</em> <span> <a href="javascript:;" class="flbc" onClick="hideWindow('doubanurl')" title="关闭">关闭</a> </span> </h3>
+<div class="c">
+	<div style="width:360px;height:100px;">
+    <form action="plugin.php?id=sicau_pt_x2:edit_douban_url&tid={$tid}" name="theform" method="post" onsubmit="return check_douban_url()">
+		<input type="text" id="douban_url" value="{$douban_url}" name="douban" style="width:250px;height:16px" />&nbsp;<button type="submit" name= "submit" class="pn pnc" style="margin-bottom:4px;"><strong>确定</strong></button><br/>
+        为什么要编辑豆瓣链接？
+        <p>这样在帖子浏览页面就会自动显示电影的详细信息啦<br/>
+        一定要填写准确哟！
+        </p>
+    </form>
+	</div>
+    
+</div>
+
+<script type="text/javascript">
+    function check_douban_url() {
+        var douban_url=theform.douban.value;
+        var reg = /movie\.douban\.com/i;            // i表示不区分大小写
+        if(douban_url.search(reg)<0) {
+            showDialog('请填写合法的豆瓣URL地址');
+            return false;
+        }
+        reg = /(\d{7,8})/g;  
+        var douban_id = douban_url.match(reg);
+        if (douban_id==null) {
+            showDialog('请填写合法的豆瓣URL地址');
+            return false;
+        }else {
+            return true;
+        }
+    }
+</script>
+</div>
+<!--{subtemplate common/footer_ajax}-->

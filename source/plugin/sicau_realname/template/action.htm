@@ -1,0 +1,55 @@
+<form id="form1" name="form1" method="post" action="home.php?mod=spacecp&ac=plugin&id=sicau_realname:result">
+    <input name="no" type="hidden" id="no" value="{$user}"/>
+    <input name="pre" type="hidden" id="preno" value="{$pre_no}"/>
+    <input name="name" type="hidden" id="name" value="{$result['name']}"/>
+    <table cellspacing="0" cellpadding="0" class="tfm">
+        <tr>
+            <th colspan="2" class="xs2 xw1">
+                川农教务管理实名验证——信息确认
+            </th>
+        </tr>
+        <!--{if $result['flag']==0}-->
+        <tr>
+            <th colspan="2">
+                学号或密码错误，请重试。
+            </th>
+        </tr>
+        <!--{elseif $result['flag'] == 1}-->
+        <tr>
+            <th>
+                您的学号为：
+            </th>
+            <td class="pns">
+                {$user}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                您的名字为：
+            </th>
+            <td class="pns">
+                {$result['name']}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                您的身份为：
+            </th>
+            <td class="pns">
+                {$result['shenfen']}
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input class="pn vm" type="submit" name="submit" id="submit" value="下一步"/>
+            </th>
+        </tr>
+        <!--{else}-->
+        <tr>
+            <th colspan="2">
+                {$message}
+            </th>
+        </tr>
+        <!--{/if}-->
+    </table>
+</form>

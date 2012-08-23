@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/dsu_paulsign/discuz_plugin_dsu_paulsign_SC_GBK.xml]]></item>
+		<item id="1"><![CDATA[source/plugin/dsu_paulsign/discuz_plugin_dsu_paulsign_SC_UTF8.xml]]></item>
+		<item id="2"><![CDATA[source/plugin/dsu_paulsign/discuz_plugin_dsu_paulsign_TC_BIG5.xml]]></item>
+		<item id="3"><![CDATA[source/plugin/dsu_paulsign/discuz_plugin_dsu_paulsign_TC_UTF8.xml]]></item>
+		<item id="4"><![CDATA[source/plugin/dsu_paulsign/img/1/ch.gif]]></item>
+		<item id="5"><![CDATA[source/plugin/dsu_paulsign/img/1/fd.gif]]></item>
+		<item id="6"><![CDATA[source/plugin/dsu_paulsign/img/1/kx.gif]]></item>
+		<item id="7"><![CDATA[source/plugin/dsu_paulsign/img/1/ng.gif]]></item>
+		<item id="8"><![CDATA[source/plugin/dsu_paulsign/img/1/nu.gif]]></item>
+		<item id="9"><![CDATA[source/plugin/dsu_paulsign/img/1/shuai.gif]]></item>
+		<item id="10"><![CDATA[source/plugin/dsu_paulsign/img/1/wl.gif]]></item>
+		<item id="11"><![CDATA[source/plugin/dsu_paulsign/img/1/yl.gif]]></item>
+		<item id="12"><![CDATA[source/plugin/dsu_paulsign/img/1/ym.gif]]></item>
+		<item id="13"><![CDATA[source/plugin/dsu_paulsign/img/2/ch.gif]]></item>
+		<item id="14"><![CDATA[source/plugin/dsu_paulsign/img/2/fd.gif]]></item>
+		<item id="15"><![CDATA[source/plugin/dsu_paulsign/img/2/kx.gif]]></item>
+		<item id="16"><![CDATA[source/plugin/dsu_paulsign/img/2/ng.gif]]></item>
+		<item id="17"><![CDATA[source/plugin/dsu_paulsign/img/2/nu.gif]]></item>
+		<item id="18"><![CDATA[source/plugin/dsu_paulsign/img/2/shuai.gif]]></item>
+		<item id="19"><![CDATA[source/plugin/dsu_paulsign/img/2/wl.gif]]></item>
+		<item id="20"><![CDATA[source/plugin/dsu_paulsign/img/2/yl.gif]]></item>
+		<item id="21"><![CDATA[source/plugin/dsu_paulsign/img/2/ym.gif]]></item>
+		<item id="22"><![CDATA[source/plugin/dsu_paulsign/img/paulsign.png]]></item>
+		<item id="23"><![CDATA[source/plugin/dsu_paulsign/img/qdft.gif]]></item>
+		<item id="24"><![CDATA[source/plugin/dsu_paulsign/img/qdtb.gif]]></item>
+		<item id="25"><![CDATA[source/plugin/dsu_paulsign/img/qdtb.psd]]></item>
+		<item id="26"><![CDATA[source/plugin/dsu_paulsign/img/qdtb1.gif]]></item>
+		<item id="27"><![CDATA[source/plugin/dsu_paulsign/install.php]]></item>
+		<item id="28"><![CDATA[source/plugin/dsu_paulsign/sign.class.php]]></item>
+		<item id="29"><![CDATA[source/plugin/dsu_paulsign/sign.inc.php]]></item>
+		<item id="30"><![CDATA[source/plugin/dsu_paulsign/sign_crash.inc.php]]></item>
+		<item id="31"><![CDATA[source/plugin/dsu_paulsign/sign_helper.inc.php]]></item>
+		<item id="32"><![CDATA[source/plugin/dsu_paulsign/sign_import.inc.php]]></item>
+		<item id="33"><![CDATA[source/plugin/dsu_paulsign/sign_mobile.class.php]]></item>
+		<item id="34"><![CDATA[source/plugin/dsu_paulsign/sign_troubleshooting.inc.php]]></item>
+		<item id="35"><![CDATA[source/plugin/dsu_paulsign/template/ajaxsign.htm]]></item>
+		<item id="36"><![CDATA[source/plugin/dsu_paulsign/template/float.htm]]></item>
+		<item id="37"><![CDATA[source/plugin/dsu_paulsign/template/mobile/float.htm]]></item>
+		<item id="38"><![CDATA[source/plugin/dsu_paulsign/template/mobile/sign.htm]]></item>
+		<item id="39"><![CDATA[source/plugin/dsu_paulsign/template/sign.htm]]></item>
+		<item id="40"><![CDATA[source/plugin/dsu_paulsign/template/sign_helper.htm]]></item>
+		<item id="41"><![CDATA[source/plugin/dsu_paulsign/template/sign_list.htm]]></item>
+		<item id="42"><![CDATA[source/plugin/dsu_paulsign/uninstall.php]]></item>
+		<item id="43"><![CDATA[source/plugin/dsu_paulsign/upgrade.php]]></item>
+		<item id="44"><![CDATA[source/plugin/dsu_paulsign/validator.xml]]></item>
+	</item>
+</root>
